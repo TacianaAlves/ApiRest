@@ -5,7 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import br.com.tacy.ApiRest.entities.Cliente;
 
+
 @Repository
 public interface ClienteRepository  extends JpaRepository<Cliente, Integer>{
+	
+	public Cliente findByCpf(String cpf);
 
 }

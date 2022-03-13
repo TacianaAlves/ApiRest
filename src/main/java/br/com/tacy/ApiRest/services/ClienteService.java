@@ -17,4 +17,21 @@ public class ClienteService {
 	public List<Cliente>buscarTodos(){
 		return repository.findAll();
 	}
+
+	public Cliente findByCpf(String cpf) {
+		return repository.findByCpf(cpf);
+	}
+	
+	public Cliente salvar(Cliente cliente) {
+		return repository.save(cliente);
+	}
+	public Cliente atualizar(Cliente cliente) {
+		return repository.save(cliente);
+	}
+
+	public String excluir(Integer id) {
+		repository.deleteById(id);
+		return "Cliente excluido da base de dados!";
+	}
+	
 }
